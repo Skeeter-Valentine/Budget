@@ -2,7 +2,7 @@ var budgetController= (function(){
     var Expense= function(id, description,value){
         this.id= id;
         this.description=description;
-        this.value=value;
+        this.value=+value;
         this.percentage=-1;
     }
     Expense.prototype.calcPercentage= function(totalIncome){
@@ -17,7 +17,7 @@ var budgetController= (function(){
     var Income= function(id, description,value){
         this.id= id;
         this.description=description;
-        this.value=value;
+        this.value=+value;
     }
 
     var calculateTotal= function(type){
